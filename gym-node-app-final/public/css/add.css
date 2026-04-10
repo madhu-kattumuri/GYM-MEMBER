@@ -1,0 +1,10 @@
+body {
+    font-family: Arial;
+    background:rgb(128,128,128);
+    text-align: center;
+}
+/* Save Button */
+.btn-save {
+    background-color: forestgreen;
+    color: #a29797;;
+}

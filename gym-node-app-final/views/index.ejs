@@ -1,0 +1,39 @@
+
+<head>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+
+
+<h2>Gym Membership</h2>
+
+<form action="/search">
+    <input type="text" name="name" placeholder="Search">
+    <button type="submit" class="btn-search">Search</button>
+</form>
+
+<a href="/add">Add Member</a>
+
+<table border="1">
+<tr>
+<th>ID</th><th>Name</th><th>Plan</th><th>Phone</th><th>Action</th>
+</tr>
+
+<% members.forEach((m, index) => { %>
+<tr>
+<td><%= index+1 %></td>
+<td><%= m.name %></td>
+<td><%= m.plan %></td>
+<td><%= m.phone %></td>
+<td>
+    <a href="/edit/<%= m.id %>" class="btn-edit">✏️ Edit</a>
+</td>
+<td> 
+    <a href="/delete/<%= m.id %>" class="btn-delete">🗑️ Delete</a>
+    
+</td>
+</tr>
+<% }) %>
+</table>
+
+
+
